@@ -1,4 +1,14 @@
-import homePage from './homePage';
+import homePage from './components/homePage';
+import contact from './components/contact';
+
+console.log({ contact });
+// contact.addEventListener("click", () => {
+//     console.log('Working');
+// })
 
 
-document.body.appendChild(homePage())
+let content = document.getElementById("content");
+
+content.appendChild(homePage());
+
+document.body.appendChild(content);
