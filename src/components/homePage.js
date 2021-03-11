@@ -1,25 +1,14 @@
-import logoImg from '../assets/logo.jpg';
-import '../assets/styles.less'
-
+import navBar from "./navBar";
+import mainPic from "../assets/mainPic.jpg";
 let homePage = () => {
-    let header = document.createElement("header");
+  let content = document.getElementById("content");
 
-    let logo = new Image(70, 70);
-    logo.src = logoImg;
+  let homePic = new Image(50 * 50);
+  homePic.src = mainPic;
 
-    let h1 = document.createElement("h1")
-    h1.innerText = "Desi-Dhaba";
-
-    let contact = document.createElement("div");
-    contact.innerText = "Contact"
-    contact.id = "contact";
-
-    header.appendChild(logo)
-    header.appendChild(h1)
-    header.appendChild(contact)
-    return header;
-}
-
-
+  content.appendChild(navBar());
+  content.appendChild(homePic);
+  return content;
+};
 
 export default homePage;

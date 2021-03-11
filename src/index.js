@@ -1,14 +1,9 @@
-import homePage from './components/homePage';
-import contact from './components/contact';
+import homePage from "./components/homePage";
+// import contact from "./components/contactPage";
+// import navBar from "./components/navBar";
+import "./assets/styles.less";
 
-console.log({ contact });
-// contact.addEventListener("click", () => {
-//     console.log('Working');
-// })
+// let test = document.getElementById("logo");
+// console.log(test);
 
-
-let content = document.getElementById("content");
-
-content.appendChild(homePage());
-
-document.body.appendChild(content);
+document.body.appendChild(homePage());
