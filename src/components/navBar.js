@@ -1,14 +1,9 @@
-import logoImg from "../assets/logo.jpg";
 import homePage from "./homePage";
 import contact from "./contactPage";
 import menu from "./menu";
 
 let navBar = () => {
   let header = document.createElement("header");
-
-  let logo = new Image(70, 70);
-  logo.src = logoImg;
-  logo.setAttribute("id", "logo");
 
   let h1 = document.createElement("h1");
   h1.innerText = "Desi Dhaba";
@@ -37,8 +32,13 @@ let navBar = () => {
         break;
     }
   });
-  header.append(logo, h1, navLinks);
+  header.append(h1, navLinks);
   return header;
 };
 
 export default navBar;
+
+// import logoImg from "../assets/logo.jpg";
+// let logo = new Image(70, 70);
+// logo.src = logoImg;
+// logo.setAttribute("id", "logo");

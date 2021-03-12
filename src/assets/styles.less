@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,40 +10,66 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+@primary-clr: #3a6351;
+@secondary-clr: #f2edd7;
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: @primary-clr;
+  align-items: center;
+  color: @secondary-clr;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 
-body {
-  background-color: antiquewhite;
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    margin-left: 7rem;
+    font-family: "Comfortaa", cursive;
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      margin-left: 0.5rem;
+      letter-spacing: 0.3rem;
+      font-size: 1.1rem;
+    }
+  }
 
-  header {
+  #navLinks {
     display: flex;
-    background-color: #ffffff;
+    width: 40rem;
+    padding: 1.3rem;
     justify-content: space-between;
-    background-color: tomato;
-    align-items: center;
+    font-family: "Rock Salt", cursive;
+    margin-right: 2rem;
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      width: 16rem;
+      padding: 1rem;
+      margin-right: 1.5rem;
+    }
 
-    #navLinks {
-      display: flex;
-      width: 40%;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 1.2rem;
-      margin-right: 0.5rem;
+    li {
+      cursor: pointer;
+      transition: all 0.2s ease-out;
+      width: 10rem;
+      text-align: center;
+      font-size: 1.7rem;
+      @media only screen and (min-width: 480px) and (max-width: 767px) {
+        font-size: 0.9rem;
+        width: 3rem;
+      }
 
-      li {
-        cursor: pointer;
-        transition: all 0.2s ease-out;
-
-        &:hover {
-          font-weight: bold;
-          font-size: 1.3rem;
-        }
+      &:hover {
+        font-weight: bold;
+        transform: scale(1.1);
       }
     }
   }
-  #homePic {
-    width: 100%;
-    height: auto;
-    min-width: 1500px;
-    opacity: 0.5;
-  }
+}
+#background {
+  background-image: url("./mainPic.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(5px);
+  height: 100vh;
+  overflow: hidden;
 }
