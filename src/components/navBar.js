@@ -1,4 +1,7 @@
 import logoImg from "../assets/logo.jpg";
+import homePage from "./homePage";
+import contact from "./contactPage";
+import menu from "./menu";
 
 let navBar = () => {
   let header = document.createElement("header");
@@ -8,16 +11,33 @@ let navBar = () => {
   logo.setAttribute("id", "logo");
 
   let h1 = document.createElement("h1");
-  h1.innerText = "Desi-Dhaba";
+  h1.innerText = "Desi Dhaba";
 
-  let contact = document.createElement("div");
-  contact.innerText = "Contact";
-  contact.setAttribute("id", "contact");
-  contact.setAttribute("data-contact", "contact");
+  let navLinks = document.createElement("ul");
+  navLinks.setAttribute("id", "navLinks");
+  navLinks.innerHTML = `
+  <li id='home'>Home</li>
+  <li id='menu'>Menu</li>
+  <li id='contact'>Contact</li>
+`;
 
-  header.appendChild(logo);
-  header.appendChild(h1);
-  header.appendChild(contact);
+  navLinks.addEventListener("click", (e) => {
+    switch (e.target.id) {
+      case "home":
+        content.innerHTML = "";
+        document.body.appendChild(homePage());
+        break;
+      case "menu":
+        content.innerHTML = "";
+        document.body.appendChild(menu());
+        break;
+      case "contact":
+        content.innerHTML = "";
+        document.body.appendChild(contact());
+        break;
+    }
+  });
+  header.append(logo, h1, navLinks);
   return header;
 };
 

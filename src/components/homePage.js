@@ -1,10 +1,12 @@
 import navBar from "./navBar";
 import mainPic from "../assets/mainPic.jpg";
+
 let homePage = () => {
   let content = document.getElementById("content");
 
-  let homePic = new Image(50 * 50);
+  let homePic = new Image();
   homePic.src = mainPic;
+  homePic.setAttribute("id", "homePic");
 
   content.appendChild(navBar());
   content.appendChild(homePic);
