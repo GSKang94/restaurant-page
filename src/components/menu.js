@@ -3,10 +3,11 @@ import navBar from "./navBar";
 let menuPage = () => {
   let content = document.getElementById("content");
 
-  let text = document.createElement("p");
-  text.innerText = "Hello from Menu page";
+  let menuMain = document.createElement("div");
+  menuMain.setAttribute("id", "menuMain");
+  menuMain.innerText = "Hello from contacts";
 
-  content.append(navBar(), text);
+  content.append(navBar(), menuMain);
   return content;
 };
 

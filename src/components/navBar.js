@@ -6,7 +6,7 @@ let navBar = () => {
   let header = document.createElement("header");
 
   let h1 = document.createElement("h1");
-  h1.innerText = "Desi Dhaba";
+  h1.innerText = "Desi Bistro";
 
   let navLinks = document.createElement("ul");
   navLinks.setAttribute("id", "navLinks");
@@ -32,13 +32,7 @@ let navBar = () => {
         break;
     }
   });
-  header.append(h1, navLinks);
+  header.append(navLinks);
   return header;
 };
-
 export default navBar;
-
-// import logoImg from "../assets/logo.jpg";
-// let logo = new Image(70, 70);
-// logo.src = logoImg;
-// logo.setAttribute("id", "logo");
