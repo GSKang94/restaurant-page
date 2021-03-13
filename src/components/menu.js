@@ -5,7 +5,11 @@ let menuPage = () => {
 
   let menuMain = document.createElement("div");
   menuMain.setAttribute("id", "menuMain");
-  menuMain.innerText = "Hello from contacts";
+
+  let container = document.createElement("div");
+  container.setAttribute("id", "container");
+
+  menuMain.append(container);
 
   content.append(navBar(), menuMain);
   return content;
