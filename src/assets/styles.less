@@ -11,7 +11,7 @@
 }
 @primary-clr: #3a6351;
 @secondary-clr: #f2edd7;
-@selected-clr: #ff640f;
+@tertiary-clr: #ff640f;
 @border:0.5px solid @secondary-clr;
 
 #content {
@@ -20,7 +20,7 @@
     height: 54vh;
     // filter: blur(5px);
     z-index: 0;
-    border-top: 8px solid @selected-clr;
+    border-top: 8px solid @tertiary-clr;
   }
   header {
     background-image: url(./hero.jpg);
@@ -67,7 +67,7 @@
         }
         &:hover {
           font-weight: bold;
-          color: @selected-clr;
+          color: @tertiary-clr;
         }
       }
     }
@@ -123,4 +123,81 @@
 
 .no-fade.faded-out {
   opacity: 0;
+}
+
+#menuMain {
+  font-family: "Comfortaa", cursive;
+  #menu1 {
+    position: absolute;
+    left: 45%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    height: 40rem;
+    width: 30rem;
+    background-color: #ff8953;
+    padding: 2rem 8rem 2rem 2rem;
+    box-shadow: 5px 5px 15px 5px #000000;
+    z-index: 1;
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+    }
+    li {
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: bold;
+    }
+    p {
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: normal;
+      padding-top: 0.5rem;
+    }
+  }
+  #menu2 {
+    position: absolute;
+    left: 65%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    height: 40rem;
+    width: 30rem;
+    background-color: @secondary-clr;
+    z-index: 1;
+    padding: 2rem;
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+    }
+    li {
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      font-weight: bold;
+    }
+    p {
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: normal;
+      padding-top: 0.5rem;
+    }
+  }
+}
+#backgroundMenu {
+  background-image: url("./menu.jpg");
+  height: 54vh;
+  opacity: 0.8;
+  border-top: 8px solid @tertiary-clr;
+  z-index: 0;
 }
