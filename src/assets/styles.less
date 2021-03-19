@@ -72,46 +72,44 @@
       }
     }
   }
-
-  #homeMain {
-    #logo {
-      background-image: url("./logo2.png");
-      border-radius: 5px;
-      background-position: center;
-      // box-shadow: 5px 5px 15px 5px #000000;
-      width: 40rem;
-      height: 20rem;
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 3;
-      @media only screen and (min-width: 480px) and (max-width: 767px) {
-        // left: 1.5rem;
-        // top: 10rem;
-      }
+}
+#homeMain {
+  #logo {
+    background-image: url("./logo2.png");
+    border-radius: 5px;
+    background-position: center;
+    width: 40rem;
+    height: 20rem;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      // left: 1.5rem;
+      // top: 10rem;
     }
-    #homeBtn {
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%);
-      bottom: 10%;
-      font-size: 2rem;
-      text-align: center;
-      text-transform: uppercase;
-      color: @primary-clr;
-      z-index: 4;
-      & > div {
-        background-color: @secondary-clr;
-        padding: 0.7rem;
-        margin-top: 2rem;
-        box-shadow: 1px 1px 12px 0px rgba(50, 50, 50, 0.75);
-        transition: all 0.3s ease-in-out;
-        cursor: pointer;
-        &:hover {
-          background-color: @primary-clr;
-          color: @secondary-clr;
-        }
+  }
+  #homeBtn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 10%;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: @primary-clr;
+    z-index: 4;
+    & > div {
+      background-color: @secondary-clr;
+      padding: 0.7rem;
+      margin-top: 2rem;
+      box-shadow: 1px 1px 12px 0px rgba(50, 50, 50, 0.75);
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        background-color: @primary-clr;
+        color: @secondary-clr;
       }
     }
   }
@@ -207,6 +205,14 @@
 }
 
 #contactMain {
+  width: 50rem;
+  background-color: #ff8953;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
   iframe {
     width: 20rem;
     height: 20rem;
