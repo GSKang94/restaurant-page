@@ -22,7 +22,6 @@ let homePage = () => {
   homeMain.append(logo, homeBtn, background);
 
   homeMain.classList.add("no-fade", "faded-out");
-
   requestAnimationFrame(() => {
     homeMain.classList.remove("faded-out");
   });

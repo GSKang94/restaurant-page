@@ -18,7 +18,7 @@
   #background {
     background-image: url("./mainPic.jpg");
     height: 54vh;
-    // filter: blur(5px);
+    filter: blur(2px);
     z-index: 0;
     border-top: 8px solid @tertiary-clr;
   }
@@ -85,10 +85,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
-    @media only screen and (min-width: 480px) and (max-width: 767px) {
-      // left: 1.5rem;
-      // top: 10rem;
-    }
   }
   #homeBtn {
     position: absolute;
@@ -104,7 +100,8 @@
       background-color: @secondary-clr;
       padding: 0.7rem;
       margin-top: 2rem;
-      box-shadow: 1px 1px 12px 0px rgba(50, 50, 50, 0.75);
+
+      box-shadow: 1px 3px 15px 5px #000000;
       transition: all 0.3s ease-in-out;
       cursor: pointer;
       &:hover {
@@ -128,10 +125,10 @@
   #menu1 {
     position: absolute;
     left: 45%;
-    top: 65%;
+    top: 60%;
     transform: translate(-50%, -50%);
-    height: 40rem;
-    width: 30rem;
+    height: 45rem;
+    width: 35rem;
     background-color: #ff8953;
     padding: 2rem 8rem 2rem 2rem;
     box-shadow: 5px 5px 15px 5px #000000;
@@ -160,11 +157,11 @@
   }
   #menu2 {
     position: absolute;
-    left: 65%;
-    top: 60%;
+    left: 70%;
+    top: 55%;
     transform: translate(-50%, -50%);
-    height: 40rem;
-    width: 30rem;
+    height: 45rem;
+    width: 35rem;
     background-color: @secondary-clr;
     z-index: 1;
     padding: 2rem;
@@ -194,27 +191,82 @@
 }
 #backgroundMenu {
   background-image: url("./menu.jpg");
+  background-size: cover;
   height: 54vh;
-  opacity: 0.8;
+  // opacity: 0.8;
   border-top: 8px solid @tertiary-clr;
   z-index: 0;
+  filter: blur(2px);
 }
 #map {
   width: 500px;
   height: 500px;
 }
-
+.no-border {
+  border: none;
+  outline: none;
+}
 #contactMain {
-  width: 50rem;
-  background-color: #ff8953;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 5;
-  iframe {
-    width: 20rem;
-    height: 20rem;
+  position: relative;
+  background-image: url(./pic.jpg);
+  background-size: cover;
+  height: 54vh;
+  border-top: 8px solid @tertiary-clr;
+
+  form {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45rem;
+    background-color: rgba(255, 137, 83, 0.9);
+    padding: 0 2.5rem;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 1px 3px 15px 5px #000000;
+    h1 {
+      padding: 1rem;
+      font-family: "Comfortaa", cursive;
+      font-weight: bold;
+    }
+    input {
+      background-color: @secondary-clr;
+      height: 2.8rem;
+      font-size: 1.3rem;
+      .no-border();
+      border-radius: 5px;
+      padding: 0 1.5rem;
+      &::placeholder {
+        font-size: 1.2rem;
+      }
+    }
+    textarea {
+      background-color: @secondary-clr;
+      .no-border();
+      border-radius: 5px;
+      font-size: 1.3rem;
+      padding: 0.5rem 1.5rem;
+      &::placeholder {
+        font-size: 1.2rem;
+      }
+    }
+    button {
+      width: 9rem;
+      margin: 2rem auto;
+      padding: 0.8rem;
+      font-size: 1.1rem;
+      background-color: @secondary-clr;
+      cursor: pointer;
+      .no-border();
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: @primary-clr;
+        color: @secondary-clr;
+      }
+    }
   }
 }

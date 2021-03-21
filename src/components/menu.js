@@ -1,4 +1,5 @@
 import navBar from "./navBar";
+
 let menuPage = () => {
   let content = document.getElementById("content");
 

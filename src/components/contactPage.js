@@ -7,22 +7,22 @@ let contactPage = () => {
   contactMain.setAttribute("id", "contactMain");
 
   contactMain.innerHTML = `
-  <h1>Contact us</h1>
+  
 <form>
-    <label for="name-label">Name</label>
-    <input id="name" type="text" placeholder="Enter your name" required>
-    <label for="email-label">Email</label>
-    <input id="email" type="email" placeholder="Enter your email" required>
+    <h1>Contact us</h1>
+    <input id="name" type="text" placeholder="Your name*" required>
+    <input id="email" type="email" placeholder="Your email*" required>
+    <input id="phone" type="text" placeholder="Your phone">
+    <textarea rows="5" columns="5" placeholder="message*"></textarea>
+    <button type="submit" >Send message</button>
 </form>
-  <div id="map">
-    <iframe
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDBniwsbislHNaKRCHke7-qjZZMxv69F7c
-        &q=winnipeg+pizza-pizza">
-    </iframe>
-  </div>
-  `;
+`;
 
   content.append(navBar(), contactMain);
+  contactMain.classList.add("no-fade", "faded-out");
+  requestAnimationFrame(() => {
+    contactMain.classList.remove("faded-out");
+  });
   return content;
 };
 
